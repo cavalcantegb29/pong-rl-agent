@@ -1,4 +1,3 @@
-📄 Conteúdo sugerido (copie e cole)
 # 🏓 Pong RL Agent (PPO + Atari)
 
 Agente de Reinforcement Learning treinado para jogar **Pong (Atari)** usando **PPO (Proximal Policy Optimization)** com **Stable-Baselines3** e **Gymnasium ALE**.
