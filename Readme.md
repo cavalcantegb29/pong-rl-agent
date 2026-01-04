@@ -46,9 +46,15 @@ After **1 million timesteps**, the agent:
 ```bash
 python train_pong.py
 
-
-
-
+📂 Project Structure
+pong-rl-agent/
+├── train_pong.py
+├── eval_pong.py
+├── models/
+│   └── ppo_pong_1M.zip
+├── docs/
+│   └── pong_demo.gif
+└── README.md
 
 
 
