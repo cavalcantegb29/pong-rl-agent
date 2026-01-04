@@ -1,42 +1,50 @@
 # 🏓 PPO Agent Playing Atari Pong
 
-This project trains a reinforcement learning agent to play Atari Pong
-using Proximal Policy Optimization (PPO) and the Arcade Learning Environment (ALE).
+This project trains a reinforcement learning agent to play **Atari Pong**
+using **Proximal Policy Optimization (PPO)** and the
+**Arcade Learning Environment (ALE)**.
+
+The agent learns directly from pixels and is able to sustain long rallies
+and demonstrate non-random behavior after extended training.
+
+---
 
 ## 🎮 Demo
-After 1M timesteps, the agent is able to sustain long rallies and
-demonstrates non-random behavior.
+
+After **1 million timesteps**, the agent:
+- Tracks the ball consistently
+- Maintains long rallies
+- Demonstrates learned paddle control
+
+![Pong PPO Agent](docs/pong_demo.gif)
+
+---
+
+## 🧠 Method
+
+- Algorithm: **PPO (Proximal Policy Optimization)**
+- Observation space: stacked grayscale frames (84×84)
+- Action space: discrete Atari actions
+- Training environment: `ALE/Pong-v5`
+
+---
 
 ## 🛠️ Tech Stack
+
 - Python 3.11
 - Gymnasium
 - Arcade Learning Environment (ALE)
-- Stable-Baselines3 (PPO)
+- Stable-Baselines3
 - PyTorch
+- NumPy
+- OpenCV
+
+---
 
 ## 🚀 Training
+
 ```bash
 python train_pong.py
-
-Evaluation
-
-python eval_pong.py
-
-Results
-
-~2900 steps per episode
-
-Learned paddle control and ball tracking
-
-## 📦 requirements.txt
-
-gymnasium[atari]
-ale-py
-stable-baselines3
-opencv-python
-numpy
-
-
 
 
 
