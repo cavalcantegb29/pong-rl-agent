@@ -1,60 +1,62 @@
-# 🏓 PPO Agent Playing Atari Pong
+📄 Conteúdo sugerido (copie e cole)
+# 🏓 Pong RL Agent (PPO + Atari)
 
-This project trains a reinforcement learning agent to play **Atari Pong**
-using **Proximal Policy Optimization (PPO)** and the
-**Arcade Learning Environment (ALE)**.
+Agente de Reinforcement Learning treinado para jogar **Pong (Atari)** usando **PPO (Proximal Policy Optimization)** com **Stable-Baselines3** e **Gymnasium ALE**.
 
-The agent learns directly from pixels and is able to sustain long rallies
-and demonstrate non-random behavior after extended training.
+## 🎮 Demonstração
 
----
+![Pong Agent](docs/pong_demo.gif)
 
-## 🎮 Demo
-
-After **1 million timesteps**, the agent:
-- Tracks the ball consistently
-- Maintains long rallies
-- Demonstrates learned paddle control
-
-![Pong PPO Agent](docs/pong_demo.gif)
-
----
-
-## 🧠 Method
-
-- Algorithm: **PPO (Proximal Policy Optimization)**
-- Observation space: stacked grayscale frames (84×84)
-- Action space: discrete Atari actions
-- Training environment: `ALE/Pong-v5`
-
----
-
-## 🛠️ Tech Stack
-
+## 🧠 Tecnologias
 - Python 3.11
-- Gymnasium
-- Arcade Learning Environment (ALE)
-- Stable-Baselines3
+- Gymnasium + ALE (Atari)
+- Stable-Baselines3 (PPO)
 - PyTorch
-- NumPy
-- OpenCV
+- ImageIO
+- Git + GitHub
 
----
-
-## 🚀 Training
+## ⚙️ Instalação
 
 ```bash
+pip install gymnasium ale-py stable-baselines3 torch imageio
+
+🏃 Treinamento
 python train_pong.py
 
-📂 Project Structure
-pong-rl-agent/
-├── train_pong.py
-├── eval_pong.py
-├── models/
-│   └── ppo_pong_1M.zip
-├── docs/
-│   └── pong_demo.gif
-└── README.md
 
+O modelo treinado será salvo em:
+
+models/ppo_pong_1M.zip
+
+👀 Avaliação (visual)
+python eval_pong.py
+
+🎥 Gravar GIF
+python record_pong.py
+
+
+O GIF será salvo em:
+
+docs/pong_demo.gif
+
+📊 Resultado
+
+Após ~1M de timesteps, o agente aprende a:
+
+Reagir à bola
+
+Defender e atacar
+
+Manter rallies longos
+
+🚀 Próximos passos
+
+Treinar mais timesteps (5M+)
+
+Testar outros jogos Atari
+
+Adicionar CNN customizada
+
+Publicar artigo ou vídeo demo
 
 
